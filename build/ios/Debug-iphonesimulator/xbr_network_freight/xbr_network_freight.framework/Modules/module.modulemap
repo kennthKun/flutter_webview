@@ -1,6 +1,0 @@
-framework module xbr_network_freight {
-  umbrella header "xbr_network_freight-umbrella.h"
-
-  export *
-  module * { export * }
-}
