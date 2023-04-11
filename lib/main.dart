@@ -12,8 +12,14 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      title: 'Flutter Demo',
-      home: GYKWebView(Url: 'http://192.168.3.79:8000'),
-    );
+        title: 'Flutter Demo',
+        // home: GYKWebView(Url: 'http://192.168.3.79:8000'),
+        home: Scaffold(
+          body: SafeArea(
+            child: Center(
+              child: GYKWebView(Url: 'http://192.168.3.79:8000'),
+            ),
+          ),
+        ));
   }
 }

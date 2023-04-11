@@ -306,48 +306,8 @@ class _GYKWebViewState extends State<GYKWebView> {
     }
 
     return Scaffold(
-        appBar: _appBar(
-          Color(int.parse('0xff' + statUsBarCikirStr)),
-          backButtonColor,
-          '/app/waybillHall/details',
-        ),
         body: Column(children: [
-          Expanded(child: WebViewWidget(controller: controller))
-        ]));
-  }
-
-  _appBar(Color bGcolor, Color backButColor, String path) {
-    print(widget.navTitle);
-
-    // 判断是否隐藏appbar
-    switch (widget.navTitle?['path']) {
-      case '/home/waybillList':
-        // AppBar(backgroundColor: Color(0xfff6f7fB), elevation: 0)
-        return null;
-      case '/app/waybillHall/details':
-        return AppBar(
-          elevation: 0,
-          leading: GestureDetector(
-            onTap: () {
-              controller.runJavaScript("history.go(-1)");
-            },
-            child: Container(
-              margin: const EdgeInsets.only(left: 10),
-              child: const Icon(
-                Icons.chevron_left_sharp,
-                color: Colors.black,
-                size: 26,
-              ),
-            ),
-          ),
-          title: Text(
-            widget.navTitle?['name'] ?? '',
-            style: const TextStyle(color: Colors.black),
-          ),
-          backgroundColor: Color(0xfff6f7fB),
-        );
-      default:
-        return null;
-    }
+      Expanded(child: WebViewWidget(controller: controller))
+    ]));
   }
 }
