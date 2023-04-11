@@ -13,7 +13,7 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       title: 'Flutter Demo',
-      home: GYKWebView(Url: 'http://192.168.18.13:8000'),
+      home: GYKWebView(Url: 'http://192.168.3.79:8000'),
     );
   }
 }

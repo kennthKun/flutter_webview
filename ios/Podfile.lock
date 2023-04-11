@@ -1,22 +1,59 @@
 PODS:
+  - AMapFoundation (1.8.0)
+  - AMapLocation (2.9.0):
+    - AMapFoundation (>= 1.7.0)
+  - AMapSearch (9.5.0):
+    - AMapFoundation (>= 1.8.0)
   - Flutter (1.0.0)
+  - GMObjC (3.3.2):
+    - GMOpenSSL
+  - GMOpenSSL (2.2.9)
+  - shared_preferences_foundation (0.0.1):
+    - Flutter
+    - FlutterMacOS
   - webview_flutter_wkwebview (0.0.1):
     - Flutter
+  - xbr_network_freight (0.0.1):
+    - AMapLocation
+    - AMapSearch
+    - Flutter
+    - GMObjC
 
 DEPENDENCIES:
   - Flutter (from `Flutter`)
+  - shared_preferences_foundation (from `.symlinks/plugins/shared_preferences_foundation/ios`)
   - webview_flutter_wkwebview (from `.symlinks/plugins/webview_flutter_wkwebview/ios`)
+  - xbr_network_freight (from `.symlinks/plugins/xbr_network_freight/ios`)
+
+SPEC REPOS:
+  trunk:
+    - AMapFoundation
+    - AMapLocation
+    - AMapSearch
+    - GMObjC
+    - GMOpenSSL
 
 EXTERNAL SOURCES:
   Flutter:
     :path: Flutter
+  shared_preferences_foundation:
+    :path: ".symlinks/plugins/shared_preferences_foundation/ios"
   webview_flutter_wkwebview:
     :path: ".symlinks/plugins/webview_flutter_wkwebview/ios"
+  xbr_network_freight:
+    :path: ".symlinks/plugins/xbr_network_freight/ios"
 
 SPEC CHECKSUMS:
+  AMapFoundation: f48153f724114b58da9b01875ab88a1f6856e3db
+  AMapLocation: f5eb11e11c62f0f599f80b578eec8a1f70deb985
+  AMapSearch: e0c81206b8ac1d27ef349095a96ea6398e3a0da3
   Flutter: f04841e97a9d0b0a8025694d0796dd46242b2854
+  GMObjC: 5e251e7ab2bf8127dda70f90e827a5323137ca7f
+  GMOpenSSL: d6d119ff8f00d4e03c2cdf733fb61e98e22da9c7
+  shared_preferences_foundation: 986fc17f3d3251412d18b0265f9c64113a8c2472
   webview_flutter_wkwebview: 2e2d318f21a5e036e2c3f26171342e95908bd60a
+  xbr_network_freight: 86393b6c8fabc915121599bd4efaddff2348dfea
 
 PODFILE CHECKSUM: ef19549a9bc3046e7bb7d2fab4d021637c0c58a3
 
-COCOAPODS: 1.11.3
+COCOAPODS: 1.12.0
