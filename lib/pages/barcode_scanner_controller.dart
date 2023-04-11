@@ -1,4 +1,5 @@
 import 'dart:typed_data';
+import 'package:gyk_flutter_webview/pages/webview.dart';
 import 'package:gyk_flutter_webview/utils/gap_helper.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
@@ -33,7 +34,7 @@ class _BarcodeScannerWithControllerState
   @override
   void initState() {
     super.initState();
-    getWallet();
+    // getWallet();
   }
 
   getCertificationPage() async {
@@ -201,29 +202,32 @@ class _BarcodeScannerWithControllerState
 
   judge(result) {
     print(result);
-    // result != null
-    //     ? (result.toString().contains('id=')
-    //         ? (model?.driverLicenseState != 2 &&
-    //                 model?.realNameState != 2 &&
-    //                 driverReviewState != 4
-    //             ? Get.off(DriverAuthPage(
-    //                 id: result
-    //                     .toString()
-    //                     .substring(result.toString().indexOf('=') + 1)))
-    //             : (model?.driver?.vehicleList == null ||
-    //                     model?.vehicleLicenceState != 2 &&
-    //                         model?.transportLicenceState != 2 &&
-    //                         vehicleReviewState != 4
-    //                 ? Get.off(VehicleAuthPage(
-    //                     id: result
-    //                         .toString()
-    //                         .substring(result.toString().indexOf('=') + 1)))
-    //                 : Get.off(QrCodeScanPage(
-    //                     id: result
-    //                         .toString()
-    //                         .substring(result.toString().indexOf('=') + 1),
-    //                   ))))
-    //         : showToast('未获取到模版ID'))
-    //     : const SizedBox();
+    ;
+    result != null
+        ? (result.toString().contains('id=')
+            ? (model?.driverLicenseState != 2 &&
+                    model?.realNameState != 2 &&
+                    driverReviewState != 4
+                ? Get.to(Webview(
+                    Url:
+                        "http://192.168.3.79:8000/app/templetReceiving?id=${result.toString().substring(result.toString().indexOf('=') + 1)}"))
+                : null)
+            : showToast('未获取到模版ID'))
+        : const SizedBox();
   }
 }
+
+
+// (model?.driver?.vehicleList == null ||
+//                         model?.vehicleLicenceState != 2 &&
+//                             model?.transportLicenceState != 2 &&
+//                             vehicleReviewState != 4
+//                     ? Get.off(VehicleAuthPage(
+//                         id: result
+//                             .toString()
+//                             .substring(result.toString().indexOf('=') + 1)))
+//                     : Get.off(QrCodeScanPage(
+//                         id: result
+//                             .toString()
+//                             .substring(result.toString().indexOf('=') + 1),
+//                       )))

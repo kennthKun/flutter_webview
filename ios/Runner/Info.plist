@@ -2,10 +2,12 @@
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
 <dict>
+	<key>CADisableMinimumFrameDurationOnPhone</key>
+	<true/>
 	<key>CFBundleDevelopmentRegion</key>
 	<string>$(DEVELOPMENT_LANGUAGE)</string>
 	<key>CFBundleDisplayName</key>
-	<string>Gyk Flutter Webview</string>
+	<string>猎运通</string>
 	<key>CFBundleExecutable</key>
 	<string>$(EXECUTABLE_NAME)</string>
 	<key>CFBundleIdentifier</key>
@@ -13,7 +15,7 @@
 	<key>CFBundleInfoDictionaryVersion</key>
 	<string>6.0</string>
 	<key>CFBundleName</key>
-	<string>gyk_flutter_webview</string>
+	<string>app_ailieyun</string>
 	<key>CFBundlePackageType</key>
 	<string>APPL</string>
 	<key>CFBundleShortVersionString</key>
@@ -24,6 +26,43 @@
 	<string>$(FLUTTER_BUILD_NUMBER)</string>
 	<key>LSRequiresIPhoneOS</key>
 	<true/>
+	<key>NSAppTransportSecurity</key>
+	<dict>
+		<key>NSAllowsArbitraryLoads</key>
+		<true/>
+		<key>NSAllowsLocalNetworking</key>
+		<true/>
+	</dict>
+	<key>NSAppleMusicUsageDescription</key>
+	<string>App需要您的同意,才能访问媒体资料库选择证件文件</string>
+	<key>NSBluetoothPeripheralUsageDescription</key>
+	<string>App需要您的同意,才能访问蓝牙</string>
+	<key>NSBonjourServices</key>
+	<array>
+		<string>_dartobservatory._tcp</string>
+	</array>
+	<key>NSCalendarsUsageDescription</key>
+	<string>App需要您的同意,才能访问日历</string>
+	<key>NSCameraUsageDescription</key>
+	<string>是否允许此APP使用相机，以便拍摄照片上传装卸货单据等？</string>
+	<key>NSLocalNetworkUsageDescription</key>
+	<string>App需要您的同意,才能访问本地网络</string>
+	<key>NSLocationAlwaysUsageDescription</key>
+	<string>是否允许此App获取定位权限，以便提供定位服务以便上传运输位置？</string>
+	<key>NSLocationUsageDescription</key>
+	<string>是否允许此App获取定位权限，以便提供定位服务以便上传运输位置？</string>
+	<key>NSLocationWhenInUseUsageDescription</key>
+	<string>是否允许此App获取定位权限，以便提供定位服务以便上传运输位置？</string>
+	<key>NSMicrophoneUsageDescription</key>
+	<string>App需要您的同意,才能访问麦克风</string>
+	<key>NSPhotoLibraryAddUsageDescription</key>
+	<string>App需要您的同意,才能将图片保存到相册</string>
+	<key>NSPhotoLibraryUsageDescription</key>
+	<string>是否允许此APP访问相册，以便上传装卸货单据等？</string>
+	<key>NSRemindersUsageDescription</key>
+	<string>App需要您的同意,才能访问提醒事项</string>
+	<key>UIApplicationSupportsIndirectInputEvents</key>
+	<true/>
 	<key>UILaunchStoryboardName</key>
 	<string>LaunchScreen</string>
 	<key>UIMainStoryboardFile</key>
@@ -31,21 +70,10 @@
 	<key>UISupportedInterfaceOrientations</key>
 	<array>
 		<string>UIInterfaceOrientationPortrait</string>
-		<string>UIInterfaceOrientationLandscapeLeft</string>
-		<string>UIInterfaceOrientationLandscapeRight</string>
-	</array>
-	<key>UISupportedInterfaceOrientations~ipad</key>
-	<array>
-		<string>UIInterfaceOrientationPortrait</string>
-		<string>UIInterfaceOrientationPortraitUpsideDown</string>
-		<string>UIInterfaceOrientationLandscapeLeft</string>
-		<string>UIInterfaceOrientationLandscapeRight</string>
 	</array>
 	<key>UIViewControllerBasedStatusBarAppearance</key>
 	<false/>
-	<key>CADisableMinimumFrameDurationOnPhone</key>
-	<true/>
-	<key>UIApplicationSupportsIndirectInputEvents</key>
+	<key>io.flutter.embedded_views_preview</key>
 	<true/>
 </dict>
 </plist>

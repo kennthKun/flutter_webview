@@ -1,7 +1,9 @@
 import 'dart:async';
 import 'dart:convert';
 import 'dart:io';
+import 'package:get/get.dart';
 import 'package:flutter/material.dart';
+import 'package:gyk_flutter_webview/pages/barcode_scanner_controller.dart';
 // ignore: depend_on_referenced_packages
 import 'package:webview_flutter/webview_flutter.dart';
 // Import for Android features.
@@ -210,7 +212,10 @@ class _GYKWebViewState extends State<GYKWebView> {
   init() {
     controller = WebViewController()
       ..setJavaScriptMode(JavaScriptMode.unrestricted)
-      ..addJavaScriptChannel("flutterChannel", onMessageReceived: (message) {})
+      ..addJavaScriptChannel("JumpScaner", onMessageReceived: (message) {
+        print(1111);
+        Get.to(const BarcodeScannerWithController());
+      })
       ..addJavaScriptChannel("qiyun", onMessageReceived: (message) {
         Map<String, dynamic> jsonMap = json.decode(message.message);
         print(jsonMap);
