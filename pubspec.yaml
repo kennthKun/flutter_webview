@@ -33,9 +33,32 @@ dependencies:
 
 
   # The following adds the Cupertino Icons font to your application.
+   # GetX框架
+  get: 4.6.5
+  # 网络框架
+  dio: 4.0.6
+   # 启动工具
+  url_launcher: 6.1.7
+  # Log
+  logger: 1.1.0
+   # 高德地图插件
+  amap_flutter_map: 3.0.0
+  amap_flutter_location: 3.0.0
+   #loading
+  flutter_easyloading: 3.0.5
+    # 时间格式化
+  date_format: 2.0.7
+   #屏幕适配
+  flutter_screenutil: ^5.7.0
+  # 扫描二维码
+  mobile_scanner: 3.0.0
+  #图片路径中获取二维码字符串
+  recognition_qrcode: 1.0.2+1
+  image_picker: 0.8.6+4
+
   # Use with the CupertinoIcons class for iOS style icons.
-  cupertino_icons: ^1.0.2
-  xbr_network_freight: ^2.1.5
+  cupertino_icons: 1.0.2
+  xbr_network_freight: 2.1.5
   oktoast: ^3.3.1
   sp_util: ^2.0.3
 
