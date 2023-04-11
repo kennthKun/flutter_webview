@@ -14,7 +14,7 @@ class Webview extends StatelessWidget {
         home: Scaffold(
           body: SafeArea(
             child: Center(
-              child: GYKWebView(Url: Url ?? 'http://192.168.3.79:8000'),
+              child: GYKWebView(Url: Url ?? 'https://dev-app.ailieyun.com'),
             ),
           ),
         ));
